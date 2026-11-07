@@ -1,0 +1,559 @@
+/* General Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f6faf6;
+    color: #203529;
+}
+
+/* Navigation Bar */
+.navbar {
+    background: white;
+    padding: 18px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5eee6;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #26734d;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #53645a;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #26734d;
+}
+
+.demo-tag {
+    background: #eaf5ed;
+    color: #26734d;
+    padding: 9px 13px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+/* Main Container */
+.container {
+    width: 90%;
+    max-width: 1120px;
+    margin: 35px auto;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 350px;
+    padding: 45px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 30px;
+    background: linear-gradient(120deg, #e8f5e9, #f4faf2);
+    border-radius: 22px;
+    overflow: hidden;
+}
+
+.small-heading {
+    color: #26734d;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.15;
+    margin-bottom: 16px;
+}
+
+.hero h1 span {
+    color: #26734d;
+}
+
+.hero-description {
+    color: #68796e;
+    line-height: 1.7;
+    font-size: 14px;
+    max-width: 430px;
+    margin-bottom: 25px;
+}
+
+.main-button,
+.submit-button,
+.idea-button {
+    display: inline-block;
+    padding: 13px 19px;
+    background: #26734d;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.main-button:hover,
+.submit-button:hover,
+.idea-button:hover {
+    background: #174d36;
+    transform: translateY(-2px);
+}
+
+/* Hero Illustration */
+.hero-image {
+    height: 250px;
+    background: linear-gradient(#d9eddf 0 65%, #a9d1ad 65%);
+    border-radius: 18px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sun {
+    width: 60px;
+    height: 60px;
+    background: #f7d98d;
+    border-radius: 50%;
+    position: absolute;
+    top: 25px;
+    right: 40px;
+}
+
+.school {
+    font-size: 85px;
+    position: absolute;
+    bottom: 45px;
+    z-index: 2;
+}
+
+.tree {
+    position: absolute;
+    bottom: 45px;
+    font-size: 58px;
+}
+
+.tree-one {
+    left: 18px;
+}
+
+.tree-two {
+    right: 18px;
+}
+
+.hero-image p {
+    position: absolute;
+    bottom: 12px;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    z-index: 3;
+}
+
+/* Statistics Cards */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin: 22px 0;
+}
+
+.stat-card {
+    background: white;
+    padding: 20px;
+    border: 1px solid #e5eee6;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.stat-icon {
+    width: 45px;
+    height: 45px;
+    background: #eaf5ed;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    font-size: 21px;
+}
+
+.stat-card p {
+    color: #718078;
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.stat-card h2 {
+    font-size: 24px;
+}
+
+/* Forms Section */
+.form-section {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 20px;
+}
+
+.panel {
+    background: white;
+    border: 1px solid #e5eee6;
+    border-radius: 17px;
+    padding: 27px;
+    box-shadow: 0 8px 25px rgba(31, 73, 48, 0.05);
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.section-title h2 {
+    font-size: 21px;
+}
+
+.title-icon {
+    width: 43px;
+    height: 43px;
+    display: grid;
+    place-items: center;
+    background: #eaf5ed;
+    border-radius: 12px;
+    font-size: 21px;
+}
+
+/* Form Fields */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 12px;
+    font-weight: bold;
+    color: #42564a;
+    margin: 13px 0 7px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dfe8e1;
+    border-radius: 8px;
+    background: #fbfdfb;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #71aa80;
+    box-shadow: 0 0 0 3px #eaf5ed;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.location-button {
+    background: transparent;
+    border: none;
+    color: #26734d;
+    text-align: left;
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: 9px;
+    cursor: pointer;
+}
+
+.submit-button,
+.idea-button {
+    margin-top: 19px;
+    min-height: 44px;
+}
+
+.form-note {
+    color: #87948b;
+    font-size: 10px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+/* Green Idea Box */
+.idea-button {
+    background: #eaf5ed;
+    color: #174d36;
+}
+
+.idea-button:hover {
+    background: #26734d;
+    color: white;
+}
+
+.idea-tip {
+    display: flex;
+    gap: 12px;
+    background: #f3f9f3;
+    padding: 15px;
+    border-radius: 11px;
+    margin-top: 25px;
+}
+
+.idea-tip span {
+    font-size: 23px;
+}
+
+.idea-tip strong {
+    font-size: 12px;
+}
+
+.idea-tip p {
+    color: #718078;
+    font-size: 11px;
+    line-height: 1.5;
+    margin-top: 5px;
+}
+
+/* Recent Activity */
+.activity-panel {
+    margin-top: 20px;
+}
+
+.clear-button {
+    background: white;
+    border: 1px solid #e5eee6;
+    color: #718078;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+.clear-button:hover {
+    color: #a54c40;
+    border-color: #d58b80;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 28px 10px;
+    color: #87948b;
+}
+
+.empty-state span {
+    font-size: 28px;
+}
+
+.empty-state p {
+    font-size: 12px;
+    margin-top: 9px;
+    line-height: 1.6;
+}
+
+.activity-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    border: 1px solid #e5eee6;
+    border-radius: 11px;
+    padding: 14px;
+    margin-top: 10px;
+}
+
+.activity-symbol {
+    width: 38px;
+    height: 38px;
+    background: #eaf5ed;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+}
+
+.activity-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.activity-details strong {
+    font-size: 13px;
+}
+
+.activity-details p {
+    color: #68776d;
+    font-size: 11px;
+    margin: 5px 0;
+    overflow-wrap: anywhere;
+}
+
+.activity-details small {
+    color: #9aa59d;
+    font-size: 10px;
+}
+
+.type-tag {
+    color: #26734d;
+    background: #eff7f0;
+    padding: 5px 8px;
+    border-radius: 20px;
+    font-size: 9px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Prototype Notice */
+.notice {
+    display: flex;
+    gap: 12px;
+    background: #fff9e9;
+    border: 1px solid #f2e8c9;
+    padding: 16px;
+    border-radius: 11px;
+    margin-top: 20px;
+    color: #756943;
+}
+
+.notice p {
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 28px 15px 35px;
+    color: #718078;
+    font-size: 12px;
+}
+
+footer p {
+    margin-bottom: 6px;
+}
+
+footer small {
+    color: #9aa59d;
+}
+
+/* Notification Message */
+.toast {
+    position: fixed;
+    bottom: 22px;
+    left: 50%;
+    transform: translate(-50%, 20px);
+    opacity: 0;
+    pointer-events: none;
+    background: #1d3026;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 9px;
+    font-size: 12px;
+    transition: 0.25s;
+    z-index: 20;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 760px) {
+    .navbar {
+        flex-wrap: wrap;
+        gap: 13px;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 28px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .stats {
+        gap: 9px;
+    }
+
+    .stat-card {
+        padding: 12px 9px;
+        gap: 8px;
+    }
+
+    .stat-card h2 {
+        font-size: 19px;
+    }
+
+    .stat-card p {
+        font-size: 10px;
+    }
+
+    .form-section {
+        grid-template-columns: 1fr;
+    }
+
+    .panel {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 420px) {
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-item {
+        flex-wrap: wrap;
+    }
+}
+.campus-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}

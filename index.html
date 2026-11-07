@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusCare - Clean Campus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">🌱 CampusCare</div>
+
+        <nav>
+            <a href="#dashboard">Home</a>
+            <a href="#report">Report Issue</a>
+            <a href="#ideas">Green Ideas</a>
+        </nav>
+
+        <span class="demo-tag">Student Project</span>
+    </header>
+
+    <main class="container">
+
+        <!-- Hero Section -->
+        <section class="hero" id="dashboard">
+            <div class="hero-content">
+                <p class="small-heading">A cleaner campus starts with us</p>
+                <h1>Small Actions.<br><span>Greener Campus.</span></h1>
+
+                <p class="hero-description">
+                    Notice a problem around campus? Report it.
+                    Have an idea to make our college greener?
+                    Share it with us.
+                </p>
+
+                <a href="#report" class="main-button">Report an Issue →</a>
+            </div>
+
+            <div class="hero-image">
+             <img src="lpu-campus.jpg"
+                alt="Lovely Professional University Campus"
+                class="campus-photo">
+          
+            </div>
+        </section>
+
+        <!-- Statistics -->
+        <section class="stats">
+            <div class="stat-card">
+                <div class="stat-icon">📢</div>
+                <div>
+                    <p>Total Reports</p>
+                    <h2 id="totalReports">0</h2>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">💡</div>
+                <div>
+                    <p>Green Ideas</p>
+                    <h2 id="totalIdeas">0</h2>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">🌍</div>
+                <div>
+                    <p>Campus Goal</p>
+                    <h2>100%</h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- Forms -->
+        <section class="form-section">
+
+            <!-- Report Form -->
+            <div class="panel" id="report">
+                <div class="section-title">
+                    <div>
+                        <p class="small-heading">Help improve our campus</p>
+                        <h2>Report a Campus Issue</h2>
+                    </div>
+                    <span class="title-icon">🧹</span>
+                </div>
+
+                <form id="reportForm">
+
+                    <label for="issueType">Issue Type</label>
+                    <select id="issueType" required>
+                        <option value="">Choose an issue</option>
+                        <option>Overflowing Dustbin</option>
+                        <option>Water Leakage</option>
+                        <option>Electricity Wastage</option>
+                        <option>Dirty Classroom or Corridor</option>
+                        <option>Other</option>
+                    </select>
+
+                    <label for="location">Campus Location</label>
+                    <input
+                        type="text"
+                        id="location"
+                        placeholder="Example: Block A, Room 204"
+                        required
+                    >
+
+                    <button type="button" id="locationButton" class="location-button">
+                        📍 Use My Current Location
+                    </button>
+
+                    <label for="description">Describe the Issue</label>
+                    <textarea
+                        id="description"
+                        rows="4"
+                        placeholder="Describe the problem..."
+                        required
+                    ></textarea>
+
+                    <label for="photo">Add Photo (Optional)</label>
+                    <input type="file" id="photo" accept="image/*">
+
+                    <button type="submit" class="submit-button">
+                        Submit Report →
+                    </button>
+
+                    <p class="form-note">
+                        Demo only: reports are saved in this browser.
+                        They are not sent to college staff.
+                    </p>
+                </form>
+            </div>
+
+            <!-- Green Ideas Form -->
+            <div class="panel" id="ideas">
+                <div class="section-title">
+                    <div>
+                        <p class="small-heading">Think green</p>
+                        <h2>Share a Green Idea</h2>
+                    </div>
+                    <span class="title-icon">💡</span>
+                </div>
+
+                <form id="ideaForm">
+                    <label for="ideaTitle">Idea Title</label>
+                    <input
+                        type="text"
+                        id="ideaTitle"
+                        placeholder="Example: More Water Refill Stations"
+                        required
+                    >
+
+                    <label for="ideaDescription">Your Suggestion</label>
+                    <textarea
+                        id="ideaDescription"
+                        rows="5"
+                        placeholder="How can this make our campus better?"
+                        required
+                    ></textarea>
+
+                    <button type="submit" class="idea-button">
+                        Share Idea →
+                    </button>
+                </form>
+
+                <div class="idea-tip">
+                    <span>🌿</span>
+                    <div>
+                        <strong>Every Idea Matters</strong>
+                        <p>
+                            Saving water, reducing waste and using energy
+                            wisely can make a real difference.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Activity -->
+        <section class="panel activity-panel">
+            <div class="section-title">
+                <div>
+                    <p class="small-heading">Your contributions</p>
+                    <h2>Recent Activity</h2>
+                </div>
+
+                <button type="button" id="clearButton" class="clear-button">
+                    Clear Demo Data
+                </button>
+            </div>
+
+            <div id="activityList">
+                <div class="empty-state">
+                    <span>🌱</span>
+                    <p>
+                        No activity yet. Submit a report or share a green idea
+                        to get started.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Information Note -->
+        <section class="notice">
+            <span>ℹ️</span>
+            <p>
+                <strong>Prototype Note:</strong>
+                This is a frontend demonstration. Reports and ideas are saved
+                in the browser. Real staff notifications and shared complaint
+                tracking would require a backend and database.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Made for a cleaner and greener campus 💚</p>
+        <small>CampusCare | Student Project Prototype</small>
+    </footer>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
